@@ -205,6 +205,7 @@ public class Main {
         double d3 = i3/123.456; // Decimal Division
         System.out.println("f3: " + f3);
         System.out.println("d3: " + d3);
+        System.out.println();
 
         // Short Hands
         System.out.println("Short Operations: ");
@@ -223,11 +224,29 @@ public class Main {
         // Increment-Decrement Operators
         System.out.println("Increment-Decrement: ");
         System.out.println("i3: " + i3++);  // Post-increment
+        System.out.println("i3: " + i3);
         System.out.println("i4: " + i4--);  // Post-decrement
+        System.out.println("i4: " + i4);
         System.out.println("i5: " + ++i5);  // Pre-increment
         System.out.println("i6: " + --i6);  // Pre-decrement
         System.out.println();
 
+        //--------------------------------------------------------------------------------------------------------------
 
+        // Bitwise Operators
+        System.out.println("Binary Operations: ");
+        System.out.println("---------------");
+
+        int i8 = 127;
+        int i9 = 34;
+        System.out.println("Binary of 127: " + Integer.toBinaryString(i8)); // Method to get binary string
+        System.out.println("Binary of 34: " + Integer.toBinaryString(i9));  // Method to get binary string
+        System.out.println("AND Operation (127 & 34): " + Integer.toBinaryString(i8 & i9) + " (" + (i8 & i9) + ")");    // Bitwise AND Operation
+        System.out.println("OR Operation (127 | 34): " + Integer.toBinaryString(i8 | i9) + " (" + (i8 | i9) + ")");  // Bitwise OR Operation
+        System.out.println("XOR Operation (127 ^ 34): " + Integer.toBinaryString(i8 ^ i9) + " (" + (i8 ^ i9) + ")"); // Bitwise XOR Operation
+        System.out.println("NOT Operation (~127): " + Integer.toBinaryString(~i8) + " (" + ~i8 + ")");   // Bitwise Inversion
+        System.out.println("Left Shift (127<<2): " + Integer.toBinaryString(i8 << 2) + " (" + (i8 << 2) + ")");  // Shift 2 bits towards left
+        System.out.println("Right Shift (127<<2): " + Integer.toBinaryString(i8 >> 2) + " (" + (i8 >> 2) + ")"); // Shift 2 bits towards right
+        System.out.println();
     }
 }
