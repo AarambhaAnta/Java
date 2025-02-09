@@ -2,6 +2,7 @@ package com.markblue.javaspeedrun.datatypes;
 
 public class Main {
     public static void main(String[] args) {
+        // Primitive Data types
         // Integral numbers
         // Byte data type (1 byte)
         System.out.println("\nByte Range:");
@@ -114,6 +115,26 @@ public class Main {
         System.out.println("Float Value: " + f2);
         System.out.println("Long Value: " + l2);
         System.out.println("Integer Value: " + i2);
+        System.out.println();
+
+        // Non-primitive data type
+        // class based implementation
+        // Dynamic memory allocation (Heap)
+        // String data type
+        // Stored in string pool (part of Heap memory)
+        // If data are same new pointer points to same data
+        // If data are same but memory allocated Dynamically, then new memory is allocated
+        String str1 = "Hello";
+        String str2 = "Hello";
+        String str3 = new String("Hello");
+        System.out.println("String Data Type");
+        System.out.println("---------------");
+        System.out.println("str1: " + str1);    // A pointer that point to "Hello" in string pool
+        System.out.println("str2: " + str2);    // Another pointer pointing to same data "Hello"
+        System.out.println("str3: " + str3);    // A new data "Hello" & a new pointer
+        System.out.println("String str1 & str2 same: " + (str1 == str2));   // Both pointing to same data
+        System.out.println("String str1 & str3 same: " + (str1 == str3));   // Both pointing to different data
+        System.out.println("String str1 & str3 equal: " + (str1.equals(str3))); // The value inside both is same
         System.out.println();
     }
 }
