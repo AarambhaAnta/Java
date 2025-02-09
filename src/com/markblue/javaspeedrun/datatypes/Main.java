@@ -87,6 +87,8 @@ public class Main {
         System.out.println((char) 10084);   // integer 10084 associated with character ❤
         System.out.println();
 
+        //--------------------------------------------------------------------------------------------------------------
+
         // Widening conversions (implicit in nature)
         System.out.println("Widening Conversion Examples:");
         System.out.println("---------------");
@@ -117,6 +119,8 @@ public class Main {
         System.out.println("Integer Value: " + i2);
         System.out.println();
 
+        //--------------------------------------------------------------------------------------------------------------
+
         // Non-primitive data type
         // class based implementation
         // Dynamic memory allocation (Heap)
@@ -139,6 +143,8 @@ public class Main {
         System.out.println("String str1 & str3 equal: " + (str1.equals(str3))); // The value inside both is same
         System.out.println();
 
+        //--------------------------------------------------------------------------------------------------------------
+
         // String Immutability
         System.out.println("String Immutability: ");
         System.out.println("---------------");
@@ -156,6 +162,8 @@ public class Main {
 
         System.out.println();
 
+        //--------------------------------------------------------------------------------------------------------------
+
         // String Operations
         System.out.println("String Operations: ");
         System.out.println("---------------");
@@ -170,5 +178,56 @@ public class Main {
         System.out.println("End with 'Hello': " + text1.endsWith("Hello")); // Method to check ending sub-string
         System.out.println("Replace 'World': " + text1.replace("World", "Java"));   // Method to replace sub-string
         System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Arithmetic Operations
+        System.out.println("Arithmetic Operations: ");
+        System.out.println("---------------");
+
+        // Integer Arithmetic
+        System.out.println("Integer Operations: ");
+        int i3 = 127 + 35;  // Addition
+        int i4 = 134 - 89;  // Subtraction
+        int i5 = i4 * i3;   // Product
+        int i6 = i3 / i4;   // Quotient
+        int i7 = i3 % i4;   // Remainder
+        System.out.println("i3: " + i3);
+        System.out.println("i4: " + i4);
+        System.out.println("i5: " + i5);
+        System.out.println("i6: " + i6);
+        System.out.println("i7: " + i7);
+        System.out.println();
+
+        //Decimal Arithmetic
+        System.out.println("Float Operations: ");
+        float f3 = i3/(float) i4;   // Decimal Division
+        double d3 = i3/123.456; // Decimal Division
+        System.out.println("f3: " + f3);
+        System.out.println("d3: " + d3);
+
+        // Short Hands
+        System.out.println("Short Operations: ");
+        i3 += 2;    // i3 = i3 + 2
+        i4 -= 5;    // i4 = i4 - 5
+        i5 *= 3;    // i5 = i5 * 3
+        i6 /= 5;    // i6 = i6 / 5
+        i7 %= 2;    // i7 = i7 % 2
+        System.out.println("i3: " + i3);
+        System.out.println("i4: " + i4);
+        System.out.println("i5: " + i5);
+        System.out.println("i6: " + i6);
+        System.out.println("i7: " + i7);
+        System.out.println();
+
+        // Increment-Decrement Operators
+        System.out.println("Increment-Decrement: ");
+        System.out.println("i3: " + i3++);  // Post-increment
+        System.out.println("i4: " + i4--);  // Post-decrement
+        System.out.println("i5: " + ++i5);  // Pre-increment
+        System.out.println("i6: " + --i6);  // Pre-decrement
+        System.out.println();
+
+
     }
 }
