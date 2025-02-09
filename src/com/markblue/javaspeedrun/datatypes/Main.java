@@ -248,5 +248,31 @@ public class Main {
         System.out.println("Left Shift (127<<2): " + Integer.toBinaryString(i8 << 2) + " (" + (i8 << 2) + ")");  // Shift 2 bits towards left
         System.out.println("Right Shift (127<<2): " + Integer.toBinaryString(i8 >> 2) + " (" + (i8 >> 2) + ")"); // Shift 2 bits towards right
         System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Relational-Logical Operator
+        // Returns Boolean
+
+        // Relational Operators
+        int i10 = 127;
+        int i11 = 34;
+        int i12 = 12;
+        System.out.println("Relational Operations: ");
+        System.out.println("---------------");
+        System.out.println("127 = 34 : " + (i10 == i11));   // Returns true if both are equal
+        System.out.println("127 > 34: " + (i10 > i11)); // Returns true for (a>b) if 'a' is more than 'b'
+        System.out.println("127 < 34: " + (i10 < i11)); // Returns true for (a<b) if 'b' is more than 'a'
+        System.out.println("127 <= 34: " + (i10 <= i11));   // Returns true for (a<=b) if either 'a' is less or equal to 'b'
+        System.out.println("127 >= 34: " + (i10 >= i11));   // Returns true for (a>=b) if either 'a' is more or equal to 'b'
+        System.out.println();
+
+        // Logical Operators
+        System.out.println("Logical Operations: ");
+        System.out.println("---------------");
+        System.out.println("127 not equal to 34: " + (i10 != i11)); // Returns true if both equal
+        System.out.println("127 is more than 34 AND 12 is more than 127: " + (i10 > i11 && i10 < i12)); // Returns true if both conditions are true
+        System.out.println("12 is less than 34 OR 12 is more than 34: " + (i10 < i11 && i10 > i12));    // Returns true if one of the condition is ture
+        System.out.println();
     }
 }
