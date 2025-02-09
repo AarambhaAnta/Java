@@ -124,17 +124,36 @@ public class Main {
         // Stored in string pool (part of Heap memory)
         // If data are same new pointer points to same data
         // If data are same but memory allocated Dynamically, then new memory is allocated
+        System.out.println("String Data Type");
+        System.out.println("---------------");
+
         String str1 = "Hello";
         String str2 = "Hello";
         String str3 = new String("Hello");
-        System.out.println("String Data Type");
-        System.out.println("---------------");
+
         System.out.println("str1: " + str1);    // A pointer that point to "Hello" in string pool
         System.out.println("str2: " + str2);    // Another pointer pointing to same data "Hello"
         System.out.println("str3: " + str3);    // A new data "Hello" & a new pointer
         System.out.println("String str1 & str2 same: " + (str1 == str2));   // Both pointing to same data
         System.out.println("String str1 & str3 same: " + (str1 == str3));   // Both pointing to different data
         System.out.println("String str1 & str3 equal: " + (str1.equals(str3))); // The value inside both is same
+        System.out.println();
+
+        // String Immutability
+        System.out.println("String Immutability: ");
+        System.out.println("---------------");
+
+        String str4 = "hello";
+
+        str4.toUpperCase(); // Original string doesn't change
+        System.out.println("str4: " + str4);    // Doesn't change to upper case
+
+        String str5 = str4.toUpperCase();   // A new string is created having the str4 in uppercase
+        System.out.println("str5: " + str5);    // A new string with uppercase value of str4
+
+        str4 = str4.toUpperCase();  // Re-initialized the same string with uppercase value
+        System.out.println("str4: " + str4);    // Re-initialized the value of str4
+
         System.out.println();
     }
 }
