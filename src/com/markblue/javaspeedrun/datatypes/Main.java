@@ -124,7 +124,7 @@ public class Main {
         // Stored in string pool (part of Heap memory)
         // If data are same new pointer points to same data
         // If data are same but memory allocated Dynamically, then new memory is allocated
-        System.out.println("String Data Type");
+        System.out.println("String Representation:");
         System.out.println("---------------");
 
         String str1 = "Hello";
@@ -154,6 +154,21 @@ public class Main {
         str4 = str4.toUpperCase();  // Re-initialized the same string with uppercase value
         System.out.println("str4: " + str4);    // Re-initialized the value of str4
 
+        System.out.println();
+
+        // String Operations
+        System.out.println("String Operations: ");
+        System.out.println("---------------");
+
+        String text1 = "Hello World";
+        System.out.println("text1: " + text1);
+        System.out.println("text1 Length: " + text1.length());  // Method to get length of string
+        System.out.println("Char at index 0: " + text1.charAt(0));  // Array like indexing
+        System.out.println("Sub-string from index 0 to length: " + text1.substring(0, 3));  // Method to get sub-string
+        System.out.println("Contains 'World': " + text1.contains("World")); // Method to check presence of sub-string
+        System.out.println("Start with 'Hello': " + text1.startsWith("Hello")); // Method to check starting sub-string
+        System.out.println("End with 'Hello': " + text1.endsWith("Hello")); // Method to check ending sub-string
+        System.out.println("Replace 'World': " + text1.replace("World", "Java"));   // Method to replace sub-string
         System.out.println();
     }
 }
