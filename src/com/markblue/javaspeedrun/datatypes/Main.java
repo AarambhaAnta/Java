@@ -85,5 +85,35 @@ public class Main {
         System.out.println("Largest char value: " + (int) Character.MAX_VALUE); // 65535 (2 bytes)
         System.out.println((char) 10084);   // integer 10084 associated with character ❤
         System.out.println();
+
+        // Widening conversions (implicit in nature)
+        System.out.println("Widening Conversion Examples:");
+        System.out.println("---------------");
+        byte b1 = 127;  // 1 byte
+        short s1 = b1;  // 2 bytes
+        int i1 = s1;    // 4 bytes
+        long l1 = i1;   // 8 bytes
+        float f1 = l1;  // 4 bytes
+        double d1 = f1; // 8 bytes
+        System.out.println("Byte Value: " + b1);
+        System.out.println("Short Value: " + s1);
+        System.out.println("Integer Value: " + i1);
+        System.out.println("Long Value: " + l1);
+        System.out.println("Float Value: " + f1);
+        System.out.println("Double Value: " + d1);
+        System.out.println();
+
+        // Narrowing conversions (explicit in nature)
+        System.out.println("Narrowing Conversion Examples:");
+        System.out.println("---------------");
+        double d2 = 123.456;
+        float f2 = (float) d2;  // Narrowing from double to float
+        long l2 = (long) f2;    // Narrowing from float to long
+        int i2 = (int) l2;      // Narrowing from long to int
+        System.out.println("Double Value: " + d2);
+        System.out.println("Float Value: " + f2);
+        System.out.println("Long Value: " + l2);
+        System.out.println("Integer Value: " + i2);
+        System.out.println();
     }
 }
