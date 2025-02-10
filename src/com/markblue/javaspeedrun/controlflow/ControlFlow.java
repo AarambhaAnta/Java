@@ -18,8 +18,66 @@ public class ControlFlow {
         }else {
             System.out.println("Weather is sunny, let's go!");
         }
+        System.out.println();
 
         //--------------------------------------------------------------------------------------------------------------
+
+        // Mapping Integers to week days using If-else block
+        // Inefficient way, as it will check all the conditions, until one runs
+
+        int day = 3;
+        String dayName;
+
+        if(day==1){
+            dayName = "Monday";
+        }else if(day==2){
+            dayName = "Tuesday";
+        }else if(day==3){
+            dayName = "Wednesday";
+        }else if(day==4){
+            dayName = "Thursday";
+        }else if(day==5){
+            dayName = "Friday";
+        }else if(day==6){
+            dayName = "Saturday";
+        }else if(day==7){
+            dayName = "Sunday";
+        }else{
+            dayName = "Invalid day";
+        }
+
+        System.out.println("Map Integer-Week days(If-else): ");
+        System.out.println("-------------------");
+
+        System.out.println("Integer: " + day);
+        System.out.println("Day: " + dayName);
+        System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Re-Use the 'day' and 'dayName' variables
+        // Using Switch-Case
+        // Direct jump without running all previous cases
+
+        day = 5;
+
+        switch(day){
+            case 1: dayName = "Monday"; break;
+            case 2: dayName = "Tuesday"; break;
+            case 3: dayName = "Wednesday"; break;
+            case 4: dayName = "Thursday"; break;
+            case 5: dayName = "Friday"; break;
+            case 6: dayName = "Saturday"; break;
+            case 7: dayName = "Sunday"; break;
+            default: dayName = "Invalid day";
+        }
+
+        System.out.println("Map Integer-Week days(switch-case): ");
+        System.out.println("-------------------");
+
+        System.out.println("Switch: " + day);
+        System.out.println("Day: " + dayName);
+        System.out.println();
 
     }
 }
