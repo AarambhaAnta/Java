@@ -79,5 +79,20 @@ public class ControlFlow {
         System.out.println("Day: " + dayName);
         System.out.println();
 
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Ternary Operator (kind of 'shorthand' of If-else)
+        int a = 3;
+        boolean isEven = a%2==0?true:false;
+
+        System.out.println("Ternary Operator: ");
+        System.out.println("-------------------");
+
+        System.out.println("integer: " + a);
+        System.out.println("isEven: " + isEven);
+        System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
     }
 }
