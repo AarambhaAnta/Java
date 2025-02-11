@@ -126,5 +126,45 @@ public class ControlFlow {
             System.out.println("k: " + k);
         }while(k<100);
         System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Non-primitive datatype -> array
+        // stores same type of data
+        // in sequential order
+
+        System.out.println("Arrays: ");
+        System.out.println("-------------------");
+
+        // Declaration
+        int[] arr1 = new int[10];   // Recommended syntax
+        //int arr2[] = new int[10];   // Not recommended syntax (even if it is true)
+
+        // Accessing -> 0-based indexing
+        for (int j = 0; j < 10; j++) {
+            System.out.print(arr1[j] + " ");    // Default -> array initializes with '0' s
+        }
+        System.out.println();
+
+        // Accessing -> initialization
+        for (int j = 0; j < 10; j++) {
+            arr1[j] = j;    // Putting the value equal to the index itself
+        }
+        System.out.println();
+
+        // Accessing -> printing the values
+        for (int j = 0; j < 10; j++) {
+            System.out.print(arr1[j] + " ");
+        }
+        System.out.println();
+
+        // Accessing -> initialization
+        int[] arr2 = {1,2,3,4,5,6,7,8,9,10};
+
+        // Accessing -> element wise access
+        for (int j : arr2) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
     }
 }
