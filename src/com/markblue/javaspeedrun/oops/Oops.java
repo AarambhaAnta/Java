@@ -142,6 +142,26 @@ class Martian extends Alien{
         System.out.println("Martian is talking");
     }
 }
+// Abstraction -> Interface
+interface Mobile{
+    int numberOfBatteries = 1;
+    void makeCall();
+}
+interface MusicPlayer{
+    void makeMusic();
+}
+class SmartPhone implements Mobile, MusicPlayer{
+
+    @Override
+    public void makeCall() {
+        System.out.println("SmartPhone is making call");
+    }
+
+    @Override
+    public void makeMusic() {
+        System.out.println("SmartPhone is making music");
+    }
+}
 public class Oops {
     public static void main(String[] args) {
 
