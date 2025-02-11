@@ -74,6 +74,52 @@ class Human extends Animal {
         System.out.println("The humans makes society");
     }
 }
+
+//--------------------------------------------------------------------------------------------------------------
+
+// Polymorphism -> {compile-time, run-time}
+// Compile-time -> method overloading
+// Compile-time -> different number of parameters
+// Compile-time -> different type of parameter
+// Compile-time -> different order of parameter
+class Calculator{
+    int sum(int a, int b){
+        return a + b;
+    }
+    int sum(int a, int b, int c){
+        return a + b + c;
+    }
+    String sum(String a, String b){
+        return a + b;
+    }
+    void display(String a, int b){
+        System.out.println("String :" + a + ", Number : " + b);
+    }
+    void display(int a, String b){
+        System.out.println("Number :" + a + ", String : " + b);
+    }
+}
+// Run-time -> method overriding
+// Overrides superclass/parent-class 's methods
+// Writes new implementations for the superclass/parent-class 's methods
+class Wood{
+    void holds(){
+        System.out.println("Wood is holding woods");
+    }
+}
+class Container extends Wood{
+    void holds(){
+        System.out.println("Container is holding contents");
+    }
+}
+class House extends Wood{
+    void holds(){
+        System.out.println("House is holding humans");
+    }
+}
+
+//--------------------------------------------------------------------------------------------------------------
+
 public class Oops {
     public static void main(String[] args) {
 
@@ -139,6 +185,42 @@ public class Oops {
         human.eat();    // Inherited method -> from 'Animal' superclass -> 'Animal' inherited from its superclass 'Mammals'
         human.talk();
         human.society();
+        System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Polymorphisms
+        // Compile-time Polymorphisms
+
+        System.out.println("Polymorphism: ");
+        System.out.println("------------------");
+
+        System.out.println("Compile-time: ");
+        System.out.println("------------------");
+
+        Calculator calculator = new Calculator();
+        // sum method -> two parameter
+        System.out.println("Sum of two numbers: " + calculator.sum(1, 2));
+        // sum method -> three parameter
+        System.out.println("Sum of three numbers: " + calculator.sum(1, 2, 3));
+        // sum method -> two parameter -> different type
+        System.out.println("Sum of two strings: " + calculator.sum("a", "b"));
+        // display method -> different type of parameter
+        calculator.display(36,"alpha");
+        // display method -> different order of parameter
+        calculator.display("beta",55);
+        System.out.println();
+
+        System.out.println("Run-time: ");
+        System.out.println("------------------");
+
+        Wood wood = new Wood();
+        Wood wood2 = new Container();   // Superclass/parent-class reference
+        Wood wood3 = new House();   // Superclass/parent-class reference
+
+        wood.holds();   // Calls its own method
+        wood2.holds();  // Run-time decision -> to call the object's method
+        wood3.holds();  // Run-time decision -> to call the object's method
         System.out.println();
 
         //--------------------------------------------------------------------------------------------------------------
