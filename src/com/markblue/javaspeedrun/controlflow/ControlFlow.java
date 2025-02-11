@@ -94,5 +94,37 @@ public class ControlFlow {
 
         //--------------------------------------------------------------------------------------------------------------
 
+        // Loops - flow control statements
+
+        System.out.println("Loops : ");
+        System.out.println("-------------------");
+
+        // while loops -> runs if condition is ture
+        System.out.println("While loops: ");
+        System.out.println("-------------------");
+
+        int i = 0;
+        while(i<10){
+            System.out.println("i: " + i);
+            i++;
+        }
+        System.out.println();
+
+        // for loop -> runs if condition is true
+        System.out.println("for loops : ");
+        System.out.println("-------------------");
+
+        for (int j = 0; j < 10; j++) {
+            System.out.println("j: " + j);
+        }
+        System.out.println();
+
+        // do-while loop -> runs at-least ones and then check the condition
+
+        int k = 102;
+        do{
+            System.out.println("k: " + k);
+        }while(k<100);
+        System.out.println();
     }
 }
