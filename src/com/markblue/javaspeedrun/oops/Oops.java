@@ -120,6 +120,28 @@ class House extends Wood{
 
 //--------------------------------------------------------------------------------------------------------------
 
+// Abstraction -> hides implementation details
+// shows essential details
+// Abstraction -> abstract class
+abstract class Alien{
+    public abstract void walks();
+    public abstract void talks();
+    void sleeps(){
+        System.out.println("Sleeping ...");
+    }
+}
+class Martian extends Alien{
+
+    @Override
+    public void walks() {
+        System.out.println("Martian is walking");
+    }
+
+    @Override
+    public void talks() {
+        System.out.println("Martian is talking");
+    }
+}
 public class Oops {
     public static void main(String[] args) {
 
@@ -211,12 +233,12 @@ public class Oops {
         calculator.display("beta",55);
         System.out.println();
 
-        System.out.println("Run-time: ");
+        System.out.println("Run-time: ");   // Up-Casting
         System.out.println("------------------");
 
         Wood wood = new Wood();
-        Wood wood2 = new Container();   // Superclass/parent-class reference
-        Wood wood3 = new House();   // Superclass/parent-class reference
+        Wood wood2 = new Container();   // Superclass/parent-class reference -> upcasting
+        Wood wood3 = new House();   // Superclass/parent-class reference -> upcasting
 
         wood.holds();   // Calls its own method
         wood2.holds();  // Run-time decision -> to call the object's method
@@ -225,5 +247,15 @@ public class Oops {
 
         //--------------------------------------------------------------------------------------------------------------
 
+        // Abstraction
+        // Abstract class
+        System.out.println("Abstraction: ");
+        System.out.println("------------------");
+
+        Martian martian = new Martian();
+        martian.walks();
+        martian.talks();
+        martian.sleeps();
+        System.out.println();
     }
 }
