@@ -12,6 +12,8 @@ class Car{
     }
 }
 
+//--------------------------------------------------------------------------------------------------------------
+
 // Encapsulation -> hiding the implementation details
 // Providing methods to change or access
 class Bus{
@@ -39,6 +41,39 @@ class Bus{
     }
 }
 
+//--------------------------------------------------------------------------------------------------------------
+
+// Inheritance -> allows method reusability
+// shares properties/behaviours to the subclass/child-class
+class Mammals {   // Parent class
+    void eat(){
+        System.out.println("This mammal is eating");
+    }
+}
+// Single Inheritance -> single superclass/parent-class, single subclass/child-class
+class Cat extends Mammals {   // Child class
+    void walk(){
+        System.out.println("This Cat is walking");
+    }
+}
+// Hierarchical Inheritance -> single superclass/parent-class, multiple subclass/child-class
+// Both 'Cat' & 'Dog' class inherited the eat() method -> multiple child
+class Dog extends Mammals {
+    void run(){
+        System.out.println("This Dog is running");
+    }
+}
+// Multilevel Inheritance -> Ancestor chain -> {grandfather -> parent -> child}
+class Animal extends Mammals {
+    void talk(){
+        System.out.println("This animal is talking");
+    }
+}
+class Human extends Animal {
+    void society(){
+        System.out.println("The humans makes society");
+    }
+}
 public class Oops {
     public static void main(String[] args) {
 
@@ -64,5 +99,49 @@ public class Oops {
         bus.setSpeed(30);
         bus.drive();
         System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Inheritance
+        System.out.println("Inheritance: ");
+        System.out.println("------------------");
+
+        // Single Inheritance
+        System.out.println("Single Inheritance: ");
+        System.out.println("------------------");
+
+        Cat cat = new Cat();
+        cat.eat();  // This method is inherited from its superclass/parent-class 'Mammals'
+        cat.walk();
+        System.out.println();
+
+        // Hierarchical Inheritance
+        System.out.println("Hierarchical Inheritance: ");
+        System.out.println("------------------");
+
+        Dog dog = new Dog();
+        dog.eat();  // This method is inherited from its superclass/parent-class 'Mammals'
+        dog.run();
+        cat.eat();
+        cat.walk();
+        System.out.println();
+
+        // Multilevel Inheritance
+        System.out.println("Multi-level Inheritance: ");
+        System.out.println("------------------");
+
+        Animal animal = new Animal();
+        animal.eat();   // Inherited this method from its superclass/parent-class 'Mammals'
+        animal.talk();
+        System.out.println();
+
+        Human human = new Human();
+        human.eat();    // Inherited method -> from 'Animal' superclass -> 'Animal' inherited from its superclass 'Mammals'
+        human.talk();
+        human.society();
+        System.out.println();
+
+        //--------------------------------------------------------------------------------------------------------------
+
     }
 }
