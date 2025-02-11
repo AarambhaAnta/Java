@@ -277,5 +277,14 @@ public class Oops {
         martian.talks();
         martian.sleeps();
         System.out.println();
+
+        // Interface
+        System.out.println("Interface: ");
+        System.out.println("------------------");
+
+        SmartPhone smartPhone = new SmartPhone();
+        smartPhone.makeCall();
+        smartPhone.makeMusic();
+        System.out.println();
     }
 }
